@@ -9,6 +9,15 @@ btnLimpar.addEventListener('click', limparItensDeLista);
 
 atualizarLista();
 
+btnAdicionar.addEventListener('click', () => {
+    const texto = pEntrada.textContent.trim();
+    if (texto) {
+        lista.push(texto);
+        pEntrada.textContent = "Item";
+        atualizarLista();
+    }
+});
+
 function atualizarLista() {
     olItens.innerHTML = "";
     let lista = getLista();
